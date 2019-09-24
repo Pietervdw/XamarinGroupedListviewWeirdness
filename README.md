@@ -76,4 +76,4 @@ Full ListView XAML:
         </ListView.Footer>
 
     </ListView>
-```xaml
+```
