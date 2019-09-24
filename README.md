@@ -10,6 +10,24 @@ To reproduce the error, start the app:
 See https://github.com/xamarin/Xamarin.Forms/issues/6888 for a workaround. Solution is to add a Group Header Template to the ListView e.g.
 
 ```xaml
+<ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell Height="40">
+                    <StackLayout Orientation="Horizontal"
+                                 BackgroundColor="#081c24"
+                                 VerticalOptions="FillAndExpand">
+                        <Label Text="{Binding DateLong}"
+                               TextColor="#01d277"
+                               VerticalOptions="Center" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+```
+
+Full ListView XAML:
+
+```xaml
 <ListView ItemsSource="{Binding MovieGroups}" x:Name="ListviewMovies"
               IsGroupingEnabled="True" CachingStrategy="RecycleElementAndDataTemplate"
               GroupDisplayBinding="{Binding DateLong}">
@@ -58,4 +76,4 @@ See https://github.com/xamarin/Xamarin.Forms/issues/6888 for a workaround. Solut
         </ListView.Footer>
 
     </ListView>
-```
+```xaml
