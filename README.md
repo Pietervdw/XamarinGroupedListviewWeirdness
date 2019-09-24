@@ -22,7 +22,7 @@ See https://github.com/xamarin/Xamarin.Forms/issues/6888 for a workaround. Solut
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
-        </ListView.GroupHeaderTemplate>
+</ListView.GroupHeaderTemplate>
 ```
 
 Full ListView XAML:
